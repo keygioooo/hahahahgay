@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World News - Daily Mail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                Daily Mail
+            </a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="world.html" class="active">World</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="tech.html">Tech</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Sport</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <i class="fa-solid fa-bars burger-menu" id="burger-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <section class="page-content">
+                <h1 class="page-title">World</h1>
+                
+                <div class="feed-grid">
+                    <article class="news-card">
+                        <img src="quartiere-europeo-bruxelles.jpg" alt="Diplomazia">
+                        <div class="card-content">
+                            <span class="category">Europa</span>
+                            <h3>Summit cruciale a Bruxelles: leader divisi su nuova policy</h3>
+                            <p class="meta-info">Di Corrispondente UE • 1 ora fa</p>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <img src="cq5dam.thumbnail.cropped.750.422.jpeg" alt="Conflitto">
+                        <div class="card-content">
+                            <span class="category">Medio Oriente</span>
+                            <h3>Tregua fragile: si teme per la ripresa delle ostilità</h3>
+                            <p class="meta-info">Di Redazione Estero • 3 ore fa</p>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <img src="Javier_Milei_y_Alberto_Fernandez1-750x430.jpg" alt="Elezioni">
+                        <div class="card-content">
+                            <span class="category">Sud America</span>
+                            <h3>Elezioni presidenziali: testa a testa tra i candidati</h3>
+                            <p class="meta-info">Di Maria Lopez • 5 ore fa</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Daily Mail. Tutti i diritti riservati.</p>
+            <p>
+                <a href="#">Chi Siamo</a> | 
+                <a href="#">Contatti</a> | 
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

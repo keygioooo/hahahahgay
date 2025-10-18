@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News - Daily Mail</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                Daily Mail
+            </a>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li> 
+                    <li><a href="world.html">World</a></li>
+                    <li><a href="business.html">Business</a></li>
+                    <li><a href="tech.html" class="active">Tech</a></li>
+                    <li><a href="#">Politics</a></li>
+                    <li><a href="#">Sport</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-right">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <i class="fa-solid fa-bars burger-menu" id="burger-menu"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            
+            <section class="page-content">
+                <h1 class="page-title">Tech</h1>
+                
+                <div class="feed-grid">
+                    <article class="news-card">
+                        <img src="AI-machine-learning.jpeg" alt="AI">
+                        <div class="card-content">
+                            <span class="category">Intelligenza Artificiale</span>
+                            <h3>Il nuovo modello AI "Prometheus" supera i benchmark</h3>
+                            <p class="meta-info">Di Tech Report • 45 minuti fa</p>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <img src="geforce-rtx-40-series-new.jpeg" alt="Hardware">
+                        <div class="card-content">
+                            <span class="category">Hardware</span>
+                            <h3>Rilasciata la nuova GPU: prestazioni e prezzi</h3>
+                            <p class="meta-info">Di Alex Chen • 2 ore fa</p>
+                        </div>
+                    </article>
+                    
+                    <article class="news-card">
+                        <img src="cybersecurity-regole-ue.jpg" alt="Cybersecurity">
+                        <div class="card-content">
+                            <span class="category">Cybersecurity</span>
+                            <h3>Allerta per una nuova vulnerabilità "zero-day"</h3>
+                            <p class="meta-info">Di Redazione Sicurezza • 3 ore fa</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Daily Mail. Tutti i diritti riservati.</p>
+            <p>
+                <a href="#">Chi Siamo</a> | 
+                <a href="#">Contatti</a> | 
+                <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

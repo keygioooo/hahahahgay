@@ -1,0 +1,345 @@
+/* =======================
+   VARIABILI GLOBALI E RESET
+   ======================== */
+:root {
+    --primary-red: #CC0000;
+    --dark-text: #222222;
+    --light-text: #666666;
+    --border-color: #e0e0e0;
+    --bg-light: #f9f9f9;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: var(--dark-text);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =======================
+   HEADER
+   ======================== */
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid var(--border-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-red);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.main-nav li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--light-text);
+    padding-bottom: 8px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--dark-text);
+    border-bottom: 3px solid var(--primary-red);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    color: var(--light-text);
+}
+
+.search-icon {
+    cursor: pointer;
+}
+
+.burger-menu {
+    display: none; /* Nascosto su desktop */
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* =======================
+   TOP STORIES (HERO)
+   ======================== */
+.top-stories {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Layout 2/3 + 1/3 */
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.story-main {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.story-main img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.category {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--light-text);
+}
+
+.category.breaking {
+    color: var(--primary-red);
+}
+
+.story-main h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0.5rem 0;
+}
+
+.story-main .excerpt {
+    font-size: 1.1rem;
+    color: var(--light-text);
+}
+
+.story-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.story-secondary {
+    border-top: 4px solid var(--primary-red);
+    padding-top: 10px;
+}
+
+.story-secondary h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-top: 5px;
+}
+
+.story-secondary h3:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   NEWS FEED
+   ======================== */
+.news-feed {
+    margin-top: 3rem;
+}
+
+.news-feed h2 {
+    font-size: 2rem;
+    font-weight: 900;
+    border-bottom: 3px solid var(--dark-text);
+    padding-bottom: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.feed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.news-card {
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.news-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.2rem;
+}
+
+.card-content h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.card-content .meta-info {
+    font-size: 0.8rem;
+    color: var(--light-text);
+}
+
+/* =======================
+   FOOTER
+   ======================== */
+footer {
+    background-color: var(--dark-text);
+    color: #a0a0a0;
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =======================
+   REATTIVITÀ (MEDIA QUERIES)
+   ======================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .top-stories {
+        grid-template-columns: 1fr; /* Stack hero e sidebar */
+    }
+    
+    .story-sidebar {
+        flex-direction: row; /* Sidebar diventa orizzontale */
+        overflow-x: auto; /* Permette lo scorrimento se non ci sta */
+    }
+
+    .story-secondary {
+        min-width: 250px; /* Larghezza minima per le storie in sidebar */
+    }
+
+    .feed-grid {
+        grid-template-columns: 1fr 1fr; /* Griglia a 2 colonne */
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Mostra il burger menu */
+    }
+
+    .search-icon {
+        display: none; /* Nasconde l'icona di ricerca per semplicità */
+    }
+    
+    .main-nav {
+        /* Nasconde il menu di navigazione */
+        display: none; 
+        
+        /* Stile menu mobile */
+        position: absolute;
+        top: 100%; /* Sotto l'header */
+        left: 0;
+        width: 100%;
+        background-color: white;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 10px rgba(0,0,0,0.05);
+    }
+    
+    /* Classe JS per mostrare il menu */
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column; /* Link in colonna */
+    }
+    
+    .main-nav li {
+        margin: 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .main-nav a {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 0;
+    }
+    
+    .main-nav a:hover,
+    .main-nav a.active {
+        background-color: var(--bg-light);
+        border-bottom: 0;
+    }
+    
+    .story-main h2 {
+        font-size: 2rem; /* Titolo principale più piccolo */
+    }
+
+    .story-sidebar {
+        flex-direction: column; /* Anche la sidebar stacka in colonna */
+    }
+
+    .feed-grid {
+        grid-template-columns: 1fr; /* Griglia a 1 colonna */
+    }
+}
